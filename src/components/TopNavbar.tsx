@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X, Gift, Shirt, Watch, Scissors, ShoppingBag } from "lucide-react";
+import { Menu, X, Gift, Shirt, Watch, Scissors, ShoppingBag, Phone } from "lucide-react";
 
 const TopNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,7 @@ const TopNavbar = () => {
           </div>
           <a
             href="#"
-            className="text-sm text-white whitespace-nowrap hover:text-red-500 transition-colors duration-300 mb-2 sm:mb-0"
+            className="text-sm text-white whitespace-nowrap hover:text-red-500 transition-colors duration-300 mb-2 sm:mb-0 hidden sm:block"
           >
             CONTACTEZ-NOUS
           </a>
@@ -80,6 +80,10 @@ const TopNavbar = () => {
           <li className="flex items-center gap-4 text-white hover:text-red-400 transition-colors">
             <ShoppingBag size={28} />
             <span className="text-lg">Outlet</span>
+          </li>
+          <li className="flex items-center gap-4 text-white hover:text-red-400 transition-colors sm:hidden">
+            <Phone size={28} />
+            <span className="text-lg">Contactez-nous</span>
           </li>
         </ul>
       </div>
