@@ -1,12 +1,21 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-grow container mx-auto px-4 pt-24">
+        <div className="text-center py-20">
+          <h1 className="text-4xl font-bold text-primary-dark mb-4">
+            Welcome to Your App
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Start building something amazing with our modern React template featuring a beautiful header and footer design.
+          </p>
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 };
