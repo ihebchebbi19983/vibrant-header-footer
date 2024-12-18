@@ -3,12 +3,12 @@ import React from 'react';
 const BrandIntro = () => {
   return (
     <section className="py-8 px-4 flex flex-col items-center justify-center bg-gray-50">
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-9 bg-gray-50">
-        <h1 className="text-center text-[#591C1C] text-5xl md:text-6xl my-20 font-['WomanFontBold']">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-9 bg-gray-50">
+        <h1 className="text-center text-[#591C1C] text-4xl sm:text-5xl md:text-6xl my-20 font-['WomanFontBold'] mx-auto w-[90%] sm:w-full">
           Le monde de Fiori
         </h1>
      
-        <div className="flex flex-col md:flex-row gap-8 mx-8 my-12">
+        <div className="flex flex-col md:flex-row gap-8 mx-4 sm:mx-8 my-12">
           <div className="flex-1">
             <img
               src="About.png"
@@ -17,7 +17,7 @@ const BrandIntro = () => {
             />
           </div>
        
-          <div className="flex-1 bg-[#591C1C] text-white px-14 py-20 flex flex-col justify-between">
+          <div className="flex-1 bg-[#591C1C] text-white px-6 sm:px-14 py-20 flex flex-col justify-between">
             <div className="space-y-12">
               <p className="leading-loose text-xl font-['WomanFontBold']">
                 Fiori, fondée en 2014, est une marque tunisienne qui s'intègre dans l'univers du prêt-à-porter et maroquinerie de haute gamme pour homme.
