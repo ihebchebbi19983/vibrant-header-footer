@@ -1,94 +1,63 @@
-import { Github, Twitter, Linkedin } from 'lucide-react';
+import React from 'react';
+import { ChevronRight, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-light mt-auto">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand Section */}
-          <div className="col-span-1">
-            <h3 className="text-xl font-bold text-primary-dark mb-4">Logo</h3>
-            <p className="text-gray-600">
-              Building beautiful experiences with modern technology.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div className="col-span-1">
-            <h4 className="font-semibold text-primary-dark mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors">
-                  About
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div className="col-span-1">
-            <h4 className="font-semibold text-primary-dark mb-4">Resources</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors">
-                  Support
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Social Links */}
-          <div className="col-span-1">
-            <h4 className="font-semibold text-primary-dark mb-4">Connect</h4>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-600 hover:text-primary transition-colors"
-                aria-label="Github"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-600 hover:text-primary transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-600 hover:text-primary transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
-          </div>
+    <footer className="bg-[#471818] text-white py-10 px-16 text-[1.1rem] font-['WomanFontBold']">
+      {/* Newsletter Section */}
+      <div className="mb-7">
+        <h3 className="text-[1.25rem] font-['WomanFontBold'] mb-3.5">NEWSLETTER</h3>
+        <p className="mb-5.5 leading-relaxed">
+          Inscrivez-vous pour recevoir par e-mail des mises à jour <br />
+          sur les dernières collections, campagnes et vidéos de Fiori.
+        </p>
+        <br></br>
+        <div className="flex items-center">
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-80 mr-3.5 px-3 py-3 bg-white/20 border border-red-500 rounded
+                     text-white placeholder-white/70 outline-none backdrop-blur-sm
+                     shadow-md transition-all duration-300
+                     focus:border-[#ff5e5e] focus:shadow-[#ff5e5e]/50 focus:shadow-lg
+                     font-['WomanFontBold']"
+          />
+          <button className="text-white text-[1.3rem]">
+            <ChevronRight className="w-7 h-7" />
+          </button>
         </div>
+      </div>
 
-        {/* Copyright */}
-        <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
-          <p>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
+      <div className="text-right">
+        <p className="flex items-center justify-end my-2.5 font-['WomanFontBold']">
+          <MapPin className="mr-3.5 text-[#ff5e5e] w-7 h-7" />
+          Lac 1 juste à côté de carré italien les berges du lac, Tunis, Tunisie
+        </p>
+        <p className="flex items-center justify-end my-2.5 font-['WomanFontBold']">
+          <MapPin className="mr-3.5 text-[#ff5e5e] w-7 h-7" />
+          Tunisia mall en face Zara et Zayn
+        </p>
+      </div>
+
+      <div className="border-t border-white my-7"></div>
+
+      <div className="flex justify-between items-center">
+        <div className="text-[0.95rem] font-['WomanFontBold']">
+          © 2024 FioriForYou - Tous droits réservés
+        </div>
+        <div className="space-x-6">
+          <a href="#" className="text-white hover:text-[#ff5e5e] transition-colors text-[1.25rem]">
+            <i className="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" className="text-white hover:text-[#ff5e5e] transition-colors text-[1.25rem]">
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a href="#" className="text-white hover:text-[#ff5e5e] transition-colors text-[1.25rem]">
+            <i className="fab fa-tiktok"></i>
+          </a>
+          <a href="#" className="text-white hover:text-[#ff5e5e] transition-colors text-[1.25rem]">
+            <i className="fab fa-linkedin-in"></i>
+          </a>
         </div>
       </div>
     </footer>

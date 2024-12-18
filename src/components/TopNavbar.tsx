@@ -1,0 +1,98 @@
+import React, { useState } from "react";
+import { Menu, X, Gift, Shirt, Watch, Scissors, ShoppingBag } from "lucide-react";
+
+const TopNavbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div className="font-['Montserrat'] font-light">
+      {/* Top Navbar */}
+      <nav className="bg-primary px-6 py-4 shadow-md">
+        <div className="container mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <button
+              onClick={toggleMenu}
+              className="lg:hidden text-white hover:text-red-500 transition-colors duration-300 -ml-6"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? (
+                <X size={26} className="text-white" />
+              ) : (
+                <Menu size={26} className="text-white" />
+              )}
+            </button>
+
+            <a
+              href="#"
+              className="text-sm text-white whitespace-nowrap hover:text-red-500 transition-colors duration-300"
+            >
+              TROUVER UNE BOUTIQUE
+            </a>
+          </div>
+          <a
+            href="#"
+            className="text-sm text-white whitespace-nowrap hover:text-red-500 transition-colors duration-300"
+          >
+            CONTACTEZ-NOUS
+          </a>
+        </div>
+      </nav>
+      <div
+        className={`fixed top-0 left-0 h-full bg-[#700100]/40 backdrop-blur-md shadow-2xl transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-500 ease-in-out z-50 w-80`}
+      >
+        <div className="flex items-center justify-between p-6 border-b border-red-300/50">
+          <h2 className="text-xl font-semibold text-white">Menu</h2>
+          <button
+            onClick={toggleMenu}
+            aria-label="Close menu"
+            className="text-white hover:text-red-400"
+          >
+            <X size={28} />
+          </button>
+        </div>
+        <ul className="p-6 space-y-8">
+          <li className="flex items-center gap-4 text-white hover:text-red-400 transition-colors">
+            <Gift size={28} />
+            <span className="text-lg">Le monde Fiori</span>
+          </li>
+          <li className="flex items-center gap-4 text-white hover:text-red-400 transition-colors">
+            <ShoppingBag size={28} />
+            <span className="text-lg">L'univers Cadeaux</span>
+          </li>
+          <li className="flex items-center gap-4 text-white hover:text-red-400 transition-colors">
+            <Shirt size={28} />
+            <span className="text-lg">Le prêt à porter</span>
+          </li>
+          <li className="flex items-center gap-4 text-white hover:text-red-400 transition-colors">
+            <Watch size={28} />
+            <span className="text-lg">Accessoires</span>
+          </li>
+          <li className="flex items-center gap-4 text-white hover:text-red-400 transition-colors">
+            <Scissors size={28} />
+            <span className="text-lg">Sur mesure</span>
+          </li>
+          <li className="flex items-center gap-4 text-white hover:text-red-400 transition-colors">
+            <ShoppingBag size={28} />
+            <span className="text-lg">Outlet</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={toggleMenu}
+        ></div>
+      )}
+    </div>
+  );
+};
+
+export default TopNavbar;
