@@ -41,7 +41,7 @@ const Products = () => {
   const containerStyle: CSSProperties = {
     maxWidth: '100%',
     margin: '0 auto',
-    padding: '21px',
+    padding: '16px',
     backgroundColor: '#f5f5f5',
     fontFamily: 'WomanFontBold',
   };
@@ -49,26 +49,27 @@ const Products = () => {
   const titleStyle: CSSProperties = {
     textAlign: 'center',
     color: '#700100',
-    marginBottom: '32px',
-    fontSize: '45px',
+    marginBottom: '24px',
+    fontSize: '32px',
     fontFamily: 'WomanFontBold',
   };
 
   const gridStyle: CSSProperties = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(4, 1fr)',
-    gap: '32px',
-    padding: '21px',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+    gap: '24px',
+    padding: '16px',
   };
 
   const productCardStyle: CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
-    height: '600px',
+    height: 'auto',
+    minHeight: '500px',
     textAlign: 'left',
     transition: 'transform 0.3s ease',
     backgroundColor: 'white',
-    padding: '15px',
+    padding: '12px',
     borderRadius: '8px',
     boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
     fontFamily: 'WomanFontBold',
@@ -76,13 +77,13 @@ const Products = () => {
 
   const imageContainerStyle: CSSProperties = {
     width: '100%',
-    height: '450px',
+    height: '350px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
     overflow: 'hidden',
-    marginBottom: '15px',
+    marginBottom: '12px',
   };
 
   const imageStyle: CSSProperties = {
@@ -100,23 +101,23 @@ const Products = () => {
   };
 
   const productNameStyle: CSSProperties = {
-    fontSize: '17px',
+    fontSize: '16px',
     fontFamily: 'WomanFontBold',
-    marginBottom: '5px',
+    marginBottom: '4px',
     color: '#333',
   };
 
   const productDetailsStyle: CSSProperties = {
     color: '#888',
-    fontSize: '13px',
-    marginBottom: '5px',
+    fontSize: '12px',
+    marginBottom: '4px',
     textTransform: 'uppercase',
     lineHeight: 1.4,
     fontFamily: 'WomanFontBold',
   };
 
   const priceStyle: CSSProperties = {
-    fontSize: '17px',
+    fontSize: '16px',
     color: '#333',
     fontFamily: 'WomanFontBold',
     marginTop: 'auto',
@@ -130,7 +131,11 @@ const Products = () => {
      
       <div style={gridStyle} className="grid">
         {products.map((product) => (
-          <div key={product.id} style={productCardStyle} className="product-card">
+          <div 
+            key={product.id} 
+            style={productCardStyle} 
+            className="product-card hover:shadow-lg hover:transform hover:scale-[1.02] transition-all duration-300"
+          >
             <div style={imageContainerStyle} className="image-container">
               <img
                 src={product.image}

@@ -6,20 +6,21 @@ const Categories = () => {
   const containerStyle: CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
-    gap: '11px',
-    marginBottom: '42px',
+    gap: '8px',
+    marginBottom: '32px',
     flexWrap: 'wrap',
-    padding: '0 10px',
+    padding: '0 8px',
   };
 
   const buttonStyle: CSSProperties = {
-    padding: '8px 21px',
+    padding: '8px 16px',
     border: '1px solid #700100',
     background: 'transparent',
     cursor: 'pointer',
     color: '#700100',
-    fontSize: '15px',
+    fontSize: '14px',
     transition: 'all 0.3s ease',
+    whiteSpace: 'nowrap',
   };
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -33,12 +34,12 @@ const Categories = () => {
     style.innerHTML = `
       @media (max-width: 768px) {
         .categories-container {
-          gap: 8px;
-          margin-bottom: 30px;
+          gap: 6px;
+          margin-bottom: 24px;
         }
         .filter-button {
-          font-size: 13px;
-          padding: 6px 15px;
+          font-size: 12px;
+          padding: 6px 12px;
         }
       }
     `;
@@ -53,7 +54,7 @@ const Categories = () => {
       {categories.map((category) => (
         <button
           key={category}
-          className="filter-button"
+          className="filter-button hover:bg-[#f0f0f0] hover:scale-105 transition-all duration-300"
           style={buttonStyle}
           onClick={handleClick}
         >
