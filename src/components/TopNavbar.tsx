@@ -12,8 +12,8 @@ const TopNavbar = () => {
     <div className="font-['Montserrat'] font-light">
       {/* Top Navbar */}
       <nav className="bg-primary px-6 py-4 shadow-md">
-        <div className="container mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-4">
+        <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0">
+          <div className="flex items-center gap-4 w-full sm:w-auto">
             <button
               onClick={toggleMenu}
               className="lg:hidden text-white hover:text-red-500 transition-colors duration-300 -ml-6"
@@ -35,7 +35,7 @@ const TopNavbar = () => {
           </div>
           <a
             href="#"
-            className="text-sm text-white whitespace-nowrap hover:text-red-500 transition-colors duration-300"
+            className="text-sm text-white whitespace-nowrap hover:text-red-500 transition-colors duration-300 mb-2 sm:mb-0"
           >
             CONTACTEZ-NOUS
           </a>
